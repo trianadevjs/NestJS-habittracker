@@ -1,98 +1,149 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Habit Tracker API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Una API REST desarrollada con **NestJS** para gestionar hábitos personales, registrar su cumplimiento y generar estadísticas de progreso.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+El proyecto está diseñado siguiendo una arquitectura modular, aplicando buenas prácticas de desarrollo, principios SOLID y una estructura escalable que facilite el mantenimiento y la incorporación de nuevas funcionalidades.
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# Objetivos
 
-## Project setup
+- Gestionar usuarios y autenticación.
+- Crear y administrar hábitos personalizados.
+- Registrar el cumplimiento diario de cada hábito.
+- Calcular métricas como rachas, porcentaje de cumplimiento y estadísticas.
+- Proporcionar una API documentada y preparada para producción.
 
-```bash
-$ pnpm install
-```
+---
 
-## Compile and run the project
+# Tecnologías
 
-```bash
-# development
-$ pnpm run start
+| Tecnología | Propósito                       |
+| ---------- | ------------------------------- |
+| NestJS     | Framework principal             |
+| TypeScript | Lenguaje de programación        |
+| pnpm       | Gestor de paquetes              |
+| PostgreSQL | Sistema gestor de base de datos |
+| Prisma     | ORM                             |
+| JWT        | Autenticación                   |
+| Swagger    | Documentación de la API         |
+| Jest       | Pruebas unitarias e integración |
 
-# watch mode
-$ pnpm run start:dev
+---
 
-# production mode
-$ pnpm run start:prod
-```
+# Requisitos
 
-## Run tests
+- Node.js 22 LTS o superior
+- pnpm
+- PostgreSQL
+
+---
+
+# Instalación
+
+## Clonar el repositorio
 
 ```bash
-# unit tests
-$ pnpm run test
-
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
+git clone <repository-url>
+cd habit-tracker-api
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## Instalar dependencias
 
 ```bash
-$ pnpm install -g @nestjs/mau
-$ mau deploy
+pnpm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## Configurar variables de entorno
 
-## Resources
+Crear un archivo `.env` utilizando como referencia el archivo `.env.example`.
 
-Check out a few resources that may come in handy when working with NestJS:
+Ejemplo:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```env
+DATABASE_URL=
+JWT_SECRET=
+JWT_EXPIRES_IN=
+```
 
-## Support
+## Ejecutar la aplicación
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+pnpm start:dev
+```
 
-## Stay in touch
+La aplicación estará disponible en:
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```
+http://localhost:3000
+```
 
-## License
+---
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+# Scripts disponibles
+
+| Script           | Descripción                              |
+| ---------------- | ---------------------------------------- |
+| `pnpm start`     | Ejecuta la aplicación                    |
+| `pnpm start:dev` | Ejecuta la aplicación en modo desarrollo |
+| `pnpm build`     | Compila el proyecto                      |
+| `pnpm lint`      | Ejecuta ESLint                           |
+| `pnpm format`    | Formatea el código                       |
+| `pnpm test`      | Ejecuta las pruebas                      |
+
+---
+
+# Estructura del proyecto
+
+```text
+src/
+├── auth/
+├── users/
+├── habits/
+├── habit-entries/
+├── statistics/
+├── prisma/
+├── common/
+├── config/
+└── main.ts
+```
+
+---
+
+# Documentación
+
+La documentación técnica del proyecto se encuentra en el directorio:
+
+```text
+docs/
+```
+
+En ella se documentarán, entre otros aspectos:
+
+- Arquitectura del sistema.
+- Decisiones de diseño (ADR).
+- Modelo de datos.
+- Convenciones del proyecto.
+- Guías de desarrollo.
+
+---
+
+# Roadmap
+
+El desarrollo del proyecto se organiza mediante **Cycles (Sprints)** administrados en Plane.
+
+Cada ciclo incorpora nuevas funcionalidades y mejoras de la plataforma.
+
+---
+
+# Estado del proyecto
+
+🚧 En desarrollo.
+
+Actualmente el proyecto se encuentra en la fase de construcción de la infraestructura base.
+
+---
+
+# Licencia
+
+Este proyecto se distribuye únicamente con fines educativos y de aprendizaje.
