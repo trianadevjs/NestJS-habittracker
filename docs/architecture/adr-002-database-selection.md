@@ -158,6 +158,10 @@ Además, PostgreSQL cuenta con una integración madura con Prisma, el ORM selecc
 - Los cambios estructurales requieren migraciones controladas.
 - Mayor rigidez comparado con bases de datos orientadas a documentos.
 
+## Nota
+
+La implementación utiliza PostgreSQL con Prisma ORM 7 mediante driver adapter @prisma/adapter-pg
+
 ## Impacto
 
 El diseño de entidades del sistema seguirá un modelo relacional.
