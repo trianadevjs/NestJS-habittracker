@@ -7,7 +7,7 @@ import { AuthModule } from './auth/auth.module.js';
 import { UsersModule } from './users/users.module.js';
 import { HabitsModule } from './habits/habits.module.js';
 import { HabitsEntriesModule } from './habits-entries/habits-entries.module.js';
-import { StatisticsModule } from './statistics/Statistics.module.js';
+import { StatisticsModule } from './statistics/statistics.module.js';
 import { CommonModule } from './common/common.module.js';
 import Joi from 'joi';
 
