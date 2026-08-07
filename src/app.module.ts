@@ -3,6 +3,12 @@ import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { PrismaModule } from './prisma/prisma.module.js';
 import { ConfigModule } from '@nestjs/config';
+import { AuthModule } from './auth/auth.module.js';
+import { UsersModule } from './users/users.module.js';
+import { HabitsModule } from './habits/habits.module.js';
+import { HabitsEntriesModule } from './habits-entries/habits-entries.module.js';
+import { StatisticsModule } from './statistics/Statistics.module.js';
+import { CommonModule } from './common/common.module.js';
 import Joi from 'joi';
 
 @Module({
@@ -21,6 +27,12 @@ import Joi from 'joi';
       }),
     }),
     PrismaModule,
+    AuthModule,
+    UsersModule,
+    HabitsModule,
+    HabitsEntriesModule,
+    StatisticsModule,
+    CommonModule,
   ],
   controllers: [AppController],
   providers: [AppService],
